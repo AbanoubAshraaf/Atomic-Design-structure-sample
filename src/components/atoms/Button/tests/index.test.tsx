@@ -3,14 +3,12 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Button from "..";
 
 describe("<Button />", () => {
-  test('should match snapshot without text', () => {
-    const component = <Button text="Click Me" onClick={() => { }} />;
-    expect(render(component)).toMatchSnapshot();
-  });
-
   test("render button with text", () => {
-    render(<Button text="Click Me" onClick={() => { }} />);
+    const { container } = render(<Button text="Click Me" onClick={() => { }} />);
     expect(screen.getByText("Click Me")).toBeInTheDocument();
+
+    // Create a snapshot of the rendered output
+    expect(container).toMatchSnapshot();
   });
 
   test("call onClick handler", () => {
