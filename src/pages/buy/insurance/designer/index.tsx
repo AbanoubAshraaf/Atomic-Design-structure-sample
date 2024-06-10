@@ -1,7 +1,9 @@
 import React from "react";
-import { ProductIds } from "@/components/types";
-import BuyFlow from "@/components/organisms/Buyflow";
+import BuyFlow from "@/components/organisms/BuyFlow";
+import { PRODUCT_PROPS, ProductIds } from "@/components/types";
 
 export default function DesignerInsurance() {
-  return <BuyFlow productId={ProductIds.designerIns} />;
+  const designerProductProps = PRODUCT_PROPS[ProductIds.designerIns];
+
+  return <BuyFlow {...designerProductProps} />;
 }

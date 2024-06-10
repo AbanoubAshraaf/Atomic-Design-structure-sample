@@ -1,7 +1,6 @@
 import React from "react";
-import { render, fireEvent, getByTestId } from "@testing-library/react";
-import EmailStep from "@/components/molecules/EmailStep";
-import { mockValidUserData } from "@/components/test/mocks";
+import { render, fireEvent } from "@testing-library/react";
+import { mockValidDesignerUserData } from "@/components/test/mocks";
 import { createSnapShot } from "@/components/test/utils";
 import NameStep from ".";
 
@@ -29,10 +28,10 @@ describe("<NameStep/> Component tests", () => {
     );
 
     fireEvent.change(getByTestId("first name"), {
-      target: { value: mockValidUserData.name?.firstName },
+      target: { value: mockValidDesignerUserData.name?.firstName },
     });
     fireEvent.change(getByTestId("last name"), {
-      target: { value: mockValidUserData.name?.lastName },
+      target: { value: mockValidDesignerUserData.name?.lastName },
     });
     fireEvent.click(getByText("Next"));
 

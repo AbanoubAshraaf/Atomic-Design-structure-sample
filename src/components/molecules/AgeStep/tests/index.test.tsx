@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import AgeStep from "..";
-import { mockValidUserData } from "@/components/test/mocks";
+import { mockValidDeveloperUserData } from "@/components/test/mocks";
 import { createSnapShot } from "@/components/test/utils";
 
 describe("<AgeStep/> Component tests", () => {
@@ -18,7 +18,7 @@ describe("<AgeStep/> Component tests", () => {
     );
 
     fireEvent.change(getByTestId("age"), {
-      target: { value: mockValidUserData.age },
+      target: { value: mockValidDeveloperUserData.age },
     });
     fireEvent.click(getByText("Buy Now"));
     expect(mockCallback).toHaveBeenCalledWith("age", 20);
