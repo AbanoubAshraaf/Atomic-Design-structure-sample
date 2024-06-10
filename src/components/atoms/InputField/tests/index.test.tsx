@@ -5,7 +5,7 @@ import { createSnapShot } from "@/components/test/utils";
 
 describe("<InputField />", () => {
   test("render input field with label", () => {
-    const { container } = render(
+    const { container, getByText } = render(
       <InputField
         label="Test Label"
         value=""
@@ -13,12 +13,12 @@ describe("<InputField />", () => {
         onChange={() => { }}
       />
     );
-    expect(screen.getByText("Test Label:")).toBeInTheDocument();
+    expect(getByText("Test Label:")).toBeInTheDocument();
     createSnapShot(container)
   });
 
   test("display error message", () => {
-    const { container } = render(
+    const { container, getByText } = render(
       <InputField
         label="Test Label"
         value=""
@@ -27,13 +27,13 @@ describe("<InputField />", () => {
         onChange={() => { }}
       />
     );
-    expect(screen.getByText("Test Error")).toBeInTheDocument();
+    expect(getByText("Test Error")).toBeInTheDocument();
     createSnapShot(container)
   });
 
   test("call onChange handler", () => {
     const handleChange = jest.fn();
-    render(
+    const { getByTestId } = render(
       <InputField
         label="Test Label"
         value=""
@@ -41,7 +41,7 @@ describe("<InputField />", () => {
         onChange={handleChange}
       />
     );
-    fireEvent.change(screen.getByTestId("test label"), {
+    fireEvent.change(getByTestId("test label"), {
       target: { value: "new value" },
     });
     expect(handleChange).toHaveBeenCalledWith("new value");
