@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AgeStep from "./AgeStep";
-import EmailStep from "./EmailStep";
 import SummaryStep from "./SummaryStep";
+import EmailStep from "../molecules/EmailStep";
 
 interface BuyflowProps {
   productId: ProductIds;
@@ -32,7 +32,7 @@ const Buyflow: React.FC<BuyflowProps> = (props) => {
       </h4>
       <div className="flex justify-center w-60">
         {(currentStep === "email" && (
-          <EmailStep cb={getStepCallback("age")} />
+          <EmailStep onClick={getStepCallback("age")} />
         )) ||
           (currentStep === "age" && (
             <AgeStep cb={getStepCallback("summary")} />
