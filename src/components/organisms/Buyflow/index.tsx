@@ -1,6 +1,12 @@
 import React, { useState, useCallback } from "react";
 
-import { BuyFlowProps, Step, StepsType, CollectedData, PRODUCT_IDS_TO_NAMES } from "../../types";
+import {
+  BuyFlowProps,
+  Step,
+  StepsType,
+  CollectedData,
+  PRODUCT_IDS_TO_NAMES,
+} from "../../types";
 import EmailStep from "@/components/molecules/EmailStep";
 import AgeStep from "@/components/molecules/AgeStep";
 import SummaryStep from "@/components/molecules/SummaryStep";
@@ -10,17 +16,21 @@ const BuyFlow: React.FC<BuyFlowProps> = (props) => {
   const [collectedData, updateCollectedData] = useState({});
 
   const getStepCallback = useCallback(
-    (nextStep: Step) => (field: keyof CollectedData, value: string | number) => {
-      updateCollectedData((prevData) => ({ ...prevData, [field]: value }));
-      setCurrentStep(nextStep);
-    },
-    []
+    (nextStep: Step) =>
+      (field: keyof CollectedData, value: string | number) => {
+        updateCollectedData((prevData) => ({ ...prevData, [field]: value }));
+        setCurrentStep(nextStep);
+      },
+    [],
   );
 
   const steps: StepsType = {
     email: { component: EmailStep, props: { onClick: getStepCallback("age") } },
     age: { component: AgeStep, props: { onClick: getStepCallback("summary") } },
-    summary: { component: SummaryStep, props: { collectedData: collectedData as CollectedData } },
+    summary: {
+      component: SummaryStep,
+      props: { collectedData: collectedData as CollectedData },
+    },
   };
 
   const CurrentStep = steps[currentStep].component;

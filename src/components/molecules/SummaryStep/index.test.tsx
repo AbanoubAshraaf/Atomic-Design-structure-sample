@@ -6,7 +6,9 @@ import { createSnapShot } from "@/components/test/utils";
 
 describe("<SummaryStep/> Component tests", () => {
   test("should match snapshot", () => {
-    const {container} = render(<SummaryStep collectedData={mockValidUserData}/>);
+    const { container } = render(
+      <SummaryStep collectedData={mockValidUserData} />,
+    );
 
     createSnapShot(container);
   });

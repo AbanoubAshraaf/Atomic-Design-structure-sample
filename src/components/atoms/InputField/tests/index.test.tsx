@@ -10,8 +10,8 @@ describe("<InputField />", () => {
         label="Test Label"
         value=""
         type="text"
-        onChange={() => { }}
-      />
+        onChange={() => {}}
+      />,
     );
     expect(getByText("Test Label:")).toBeInTheDocument();
     createSnapShot(container);
@@ -24,8 +24,8 @@ describe("<InputField />", () => {
         value=""
         type="text"
         error="Test Error"
-        onChange={() => { }}
-      />
+        onChange={() => {}}
+      />,
     );
     expect(getByText("Test Error")).toBeInTheDocument();
     createSnapShot(container);
@@ -39,7 +39,7 @@ describe("<InputField />", () => {
         value=""
         type="text"
         onChange={handleChange}
-      />
+      />,
     );
     fireEvent.change(getByTestId("test label"), {
       target: { value: "new value" },
