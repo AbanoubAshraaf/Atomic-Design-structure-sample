@@ -30,7 +30,7 @@ describe("<EmailStep/> Component tests", () => {
 
   test("call callback with email value on button click", () => {
     const mockCallback = jest.fn();
-    const { getByTestId, getByText } = render(
+    const { container, getByTestId, getByText } = render(
       <EmailStep onClick={mockCallback} />,
     );
 
@@ -39,5 +39,7 @@ describe("<EmailStep/> Component tests", () => {
     });
     fireEvent.click(getByText("Next"));
     expect(mockCallback).toHaveBeenCalledWith("email", "test@getsafe.com");
+
+    createSnapShot(container);
   });
 });
