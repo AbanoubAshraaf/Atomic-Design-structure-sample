@@ -1,3 +1,4 @@
+import React from "react";
 import Buyflow, { ProductIds } from "@/components/buyflow/Buyflow";
 
 export default function InsuranceDev() {
