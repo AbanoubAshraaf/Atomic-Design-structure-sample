@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmailStep/> Component tests display an error for invalid email 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        Email
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="email"
+        type="email"
+        value="invalid-email"
+      />
+      <span
+        class="error-text"
+      >
+        Please enter a valid email address.
+      </span>
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<EmailStep/> Component tests render email input properly 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        Email
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="email"
+        type="email"
+        value=""
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
