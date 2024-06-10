@@ -21,6 +21,28 @@ describe("<NameStep/> Component tests", () => {
     createSnapShot(container);
   });
 
+  test("display validation error if last name is empty", () => {
+    const { getByText, getByTestId } = render(<NameStep onClick={jest.fn()} />);
+
+    fireEvent.change(getByTestId("first name"), {
+      target: { value: mockValidDesignerUserData.name?.firstName },
+    });
+
+    fireEvent.click(getByText("Next"));
+    expect(getByText("Both first and last names are required.")).toBeTruthy();
+  });
+
+  test("display validation error if first name is empty", () => {
+    const { getByText, getByTestId } = render(<NameStep onClick={jest.fn()} />);
+
+    fireEvent.change(getByTestId("last name"), {
+      target: { value: mockValidDesignerUserData.name?.lastName },
+    });
+
+    fireEvent.click(getByText("Next"));
+    expect(getByText("Both first and last names are required.")).toBeTruthy();
+  });
+
   test("calls callback with name values on button click", () => {
     const mockCallback = jest.fn();
     const { container, getByTestId, getByText } = render(
