@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import InputField from "..";
 import { createSnapShot } from "@/components/test/utils";
 
@@ -14,7 +14,7 @@ describe("<InputField />", () => {
       />
     );
     expect(getByText("Test Label:")).toBeInTheDocument();
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("display error message", () => {
@@ -28,7 +28,7 @@ describe("<InputField />", () => {
       />
     );
     expect(getByText("Test Error")).toBeInTheDocument();
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("call onChange handler", () => {

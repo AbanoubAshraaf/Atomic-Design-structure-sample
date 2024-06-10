@@ -13,7 +13,7 @@ const EmailStep: React.FC<StepProps> = ({ onClick }) => {
     if (!emailRegex.test(email)) {
       setError("Please enter a valid email address.");
     } else {
-      setError("")
+      setError("");
       onClick("email", email);
     }
   };

@@ -7,7 +7,7 @@ describe("<Button />", () => {
   test("render button with text", () => {
     const { container, getByText } = render(<Button text="Click Me" onClick={() => { }} />);
     expect(getByText("Click Me")).toBeInTheDocument();
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("call onClick handler", () => {

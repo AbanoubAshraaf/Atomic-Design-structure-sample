@@ -9,17 +9,17 @@ describe("<EmailStep/> Component tests", () => {
     const { container, getByTestId } = render(<EmailStep onClick={jest.fn()} />);
     expect(getByTestId("email")).toBeInTheDocument();
 
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("display an error for invalid email", () => {
     const { container, getByTestId, getByText } = render(<EmailStep onClick={jest.fn()} />);
-    const input = getByTestId('email');
-    fireEvent.change(input, { target: { value: 'invalid-email' } });
+    const input = getByTestId("email");
+    fireEvent.change(input, { target: { value: "invalid-email" } });
     fireEvent.click(getByText("Next"));
     expect(getByText("Please enter a valid email address.")).toBeInTheDocument();
 
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("call callback with email value on button click", () => {

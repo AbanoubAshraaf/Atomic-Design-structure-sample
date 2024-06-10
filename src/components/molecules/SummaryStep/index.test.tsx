@@ -5,10 +5,10 @@ import { mockValidUserData } from "@/components/test/mocks";
 import { createSnapShot } from "@/components/test/utils";
 
 describe("<SummaryStep/> Component tests", () => {
-  test('should match snapshot', () => {
+  test("should match snapshot", () => {
     const {container} = render(<SummaryStep collectedData={mockValidUserData}/>);
 
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("displays collected data and Purchase button correctly", () => {

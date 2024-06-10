@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { ProductIds } from "@/components/types";
 import BuyFlow from "..";
 import { mockValidUserData } from "@/components/test/mocks";
@@ -11,7 +11,7 @@ describe("BuyFlow Component", () => {
     const { container, getByText } = render(<BuyFlow productId={ProductIds.developerIns} />);
     expect(getByText("Buying Developer Insurance")).toBeInTheDocument();
 
-    createSnapShot(container)
+    createSnapShot(container);
   });
 
   test("render email step initially", () => {
@@ -36,7 +36,7 @@ describe("BuyFlow Component", () => {
     expect(getByText("Age: 20")).toBeInTheDocument();
     expect(getByText("Purchase")).toBeInTheDocument();
 
-    createSnapShot(container)
+    createSnapShot(container);
 
   });
 });

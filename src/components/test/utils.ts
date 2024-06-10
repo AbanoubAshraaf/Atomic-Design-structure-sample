@@ -1,3 +1,3 @@
 export const createSnapShot= (container: HTMLElement)=>{
-    expect(container).toMatchSnapshot();
-}
+  expect(container).toMatchSnapshot();
+};

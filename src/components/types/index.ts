@@ -10,7 +10,7 @@ export enum ProductIds {
 export type Step = "email" | "age" | "summary";
 
 export const PRODUCT_IDS_TO_NAMES = {
-    [ProductIds.developerIns]: "Developer Insurance",
+  [ProductIds.developerIns]: "Developer Insurance",
 };
 
 export interface CollectedData {
