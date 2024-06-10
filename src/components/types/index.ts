@@ -4,12 +4,14 @@ export interface BuyFlowProps {
 
 export enum ProductIds {
   developerIns = "developer_ins",
+  designerIns = "designer_ins",
 }
 
 export type Step = "email" | "age" | "summary";
 
 export const PRODUCT_IDS_TO_NAMES = {
   [ProductIds.developerIns]: "Developer Insurance",
+  [ProductIds.designerIns]: "Designer Insurance",
 };
 
 export interface CollectedData {

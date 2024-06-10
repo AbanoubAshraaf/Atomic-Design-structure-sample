@@ -1,7 +1,8 @@
 import React from "react";
-import Buyflow from "@/components/organisms/Buyflow";
 import { ProductIds } from "@/components/types";
+import BuyFlow from "@/components/organisms/Buyflow";
 
 export default function DeveloperInsurance() {
-  return <Buyflow productId={ProductIds.developerIns} />;
+
+  return <BuyFlow productId={ProductIds.developerIns} />;
 }
