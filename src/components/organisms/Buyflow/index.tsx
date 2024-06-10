@@ -13,7 +13,9 @@ import {
 const BuyFlow: React.FC<BuyFlowProps> = (props) => {
   const { dataSteps, productName } = props;
   const [currentStep, setCurrentStep] = useState<number>(0);
-  const [collectedData, updateCollectedData] = useState({});
+  const [collectedData, updateCollectedData] = useState<CollectedData>(
+    {} as CollectedData,
+  );
 
   const getStepCallback = useCallback(
     (field: keyof CollectedData, value: string | number | Name) => {
@@ -27,10 +29,7 @@ const BuyFlow: React.FC<BuyFlowProps> = (props) => {
     email: { component: EmailStep, props: { onClick: getStepCallback } },
     age: { component: AgeStep, props: { onClick: getStepCallback } },
     name: { component: NameStep, props: { onClick: getStepCallback } },
-    summary: {
-      component: SummaryStep,
-      props: { collectedData: collectedData as CollectedData },
-    },
+    summary: { component: SummaryStep, props: { collectedData } },
   };
 
   const stepName = dataSteps[currentStep];
