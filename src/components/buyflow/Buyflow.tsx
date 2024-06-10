@@ -2,18 +2,9 @@ import React, { useState } from "react";
 import AgeStep from "./AgeStep";
 import SummaryStep from "./SummaryStep";
 import EmailStep from "../molecules/EmailStep";
+import { BuyflowProps, PRODUCT_IDS_TO_NAMES } from "../types";
 
-interface BuyflowProps {
-  productId: ProductIds;
-}
 
-export enum ProductIds {
-  devIns = "dev_ins",
-}
-
-const PRODUCT_IDS_TO_NAMES = {
-  [ProductIds.devIns]: "Developer Insurance",
-};
 
 const Buyflow: React.FC<BuyflowProps> = (props) => {
   const [currentStep, setStep] = useState("email");

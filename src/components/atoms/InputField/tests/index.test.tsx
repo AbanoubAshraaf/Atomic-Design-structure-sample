@@ -1,6 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import InputField from "..";
+import { createSnapShot } from "@/components/test/utils";
 
 describe("<InputField />", () => {
   test("render input field with label", () => {
@@ -13,9 +14,7 @@ describe("<InputField />", () => {
       />
     );
     expect(screen.getByText("Test Label:")).toBeInTheDocument();
-
-    // Create a snapshot of the rendered output
-    expect(container).toMatchSnapshot();
+    createSnapShot(container)
   });
 
   test("display error message", () => {
@@ -29,9 +28,7 @@ describe("<InputField />", () => {
       />
     );
     expect(screen.getByText("Test Error")).toBeInTheDocument();
-
-    // Create a snapshot of the rendered output
-    expect(container).toMatchSnapshot();
+    createSnapShot(container)
   });
 
   test("call onChange handler", () => {
