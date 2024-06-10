@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NameStep/> Component tests calls callback with name values on button click 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        First Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="first name"
+        type="text"
+        value="John"
+      />
+    </div>
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        Last Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="last name"
+        type="text"
+        value="Doe"
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<NameStep/> Component tests display validation error if fields are empty 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        First Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="first name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        Last Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="last name"
+        type="text"
+        value=""
+      />
+      <span
+        class="error-text"
+      >
+        Both first and last names are required.
+      </span>
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<NameStep/> Component tests render first name and last name inputs properly 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        First Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="first name"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <label>
+        Last Name
+        :
+      </label>
+      <input
+        class="input input-bordered input-primary w-full max-w-xs"
+        data-testid="last name"
+        type="text"
+        value=""
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;

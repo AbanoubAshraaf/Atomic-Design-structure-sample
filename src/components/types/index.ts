@@ -1,24 +1,39 @@
 export interface BuyFlowProps {
-  productId: ProductIds;
+  dataSteps: Step[];
+  productName: string;
 }
 
 export enum ProductIds {
   developerIns = "developer_ins",
+  designerIns = "designer_ins",
 }
 
-export type Step = "email" | "age" | "summary";
+export type Step = "email" | "age" | "summary" | "name";
 
-export const PRODUCT_IDS_TO_NAMES = {
-  [ProductIds.developerIns]: "Developer Insurance",
+export const PRODUCT_PROPS: Record<ProductIds, BuyFlowProps> = {
+  [ProductIds.developerIns]: {
+    dataSteps: ["email", "age", "summary"],
+    productName: "Developer Insurance",
+  },
+  [ProductIds.designerIns]: {
+    dataSteps: ["email", "name", "age", "summary"],
+    productName: "Designer Insurance",
+  },
 };
+
+export interface Name {
+  firstName: string;
+  lastName: string;
+}
 
 export interface CollectedData {
   email: string;
   age: number;
+  name?: Name;
 }
 
 export interface StepProps {
-  onClick: (field: keyof CollectedData, value: string | number) => void;
+  onClick: (field: keyof CollectedData, value: string | number | Name) => void;
 }
 
 export interface SummaryStepProps {
