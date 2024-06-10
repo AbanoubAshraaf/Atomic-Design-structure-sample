@@ -19,3 +19,7 @@ export interface CollectedData {
 export interface StepProps {
     onClick: (field: keyof CollectedData, value: string | number) => void;
 }
+
+export interface SummaryStepProps {
+    collectedData: CollectedData;
+}

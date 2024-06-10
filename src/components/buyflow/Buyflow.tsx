@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import AgeStep from "../molecules/AgeStep";
-import SummaryStep from "./SummaryStep";
+import SummaryStep from "../molecules/SummaryStep";
 import EmailStep from "../molecules/EmailStep";
 import { BuyflowProps, PRODUCT_IDS_TO_NAMES } from "../types";
 
