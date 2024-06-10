@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AgeStep from "./AgeStep";
+import AgeStep from "../molecules/AgeStep";
 import SummaryStep from "./SummaryStep";
 import EmailStep from "../molecules/EmailStep";
 import { BuyflowProps, PRODUCT_IDS_TO_NAMES } from "../types";
@@ -26,7 +26,7 @@ const Buyflow: React.FC<BuyflowProps> = (props) => {
           <EmailStep onClick={getStepCallback("age")} />
         )) ||
           (currentStep === "age" && (
-            <AgeStep cb={getStepCallback("summary")} />
+            <AgeStep onClick={getStepCallback("summary")} />
           )) ||
           (currentStep === "summary" && (
             <SummaryStep collectedData={collectedData} />

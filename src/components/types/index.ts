@@ -15,3 +15,7 @@ export interface CollectedData {
     email: string;
     age: number;
 }
+
+export interface StepProps {
+    onClick: (field: keyof CollectedData, value: string | number) => void;
+}
