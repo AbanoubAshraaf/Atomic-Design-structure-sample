@@ -14,13 +14,19 @@ export const PRODUCT_IDS_TO_NAMES = {
   [ProductIds.designerIns]: "Designer Insurance",
 };
 
+export interface Name {
+  firstName: string;
+  lastName: string;
+}
+
 export interface CollectedData {
   email: string;
   age: number;
+  name?: Name;
 }
 
 export interface StepProps {
-  onClick: (field: keyof CollectedData, value: string | number) => void;
+  onClick: (field: keyof CollectedData, value: string | number | Name) => void;
 }
 
 export interface SummaryStepProps {
