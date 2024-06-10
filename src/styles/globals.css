@@ -15,3 +15,9 @@ body {
 a {
   color: #163c2c;
 }
+
+.error-text {
+  font-size: 0.75rem;
+  color: red;
+  margin-top: 0.3rem;
+}
