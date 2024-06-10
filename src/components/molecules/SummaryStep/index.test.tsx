@@ -14,8 +14,8 @@ describe("<SummaryStep/> Component tests", () => {
   test("displays collected data and Purchase button correctly", () => {
     render(<SummaryStep collectedData={mockValidUserData} />);
 
-    expect(screen.getByText("Email: test@getsafe.com")).toBeTruthy();
-    expect(screen.getByText("Age: 20")).toBeTruthy();
-    expect(screen.getByText("Purchase")).toBeTruthy();
+    expect(screen.getByText("Email: test@getsafe.com")).toBeInTheDocument();
+    expect(screen.getByText("Age: 20")).toBeInTheDocument();
+    expect(screen.getByText("Purchase")).toBeInTheDocument();
   });
 });
