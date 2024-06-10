@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuyFlow Component completes the buyflow process properly 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <h4
+      class="mb-6 text-2xl"
+    >
+      Buying 
+      Developer Insurance
+    </h4>
+    <div
+      class="flex justify-center w-60"
+    >
+      <div
+        class="flex flex-col gap-4 w-full"
+      >
+        <div
+          class="flex flex-col gap-2 items-start"
+        >
+          <div>
+            Email: 
+            test@getsafe.com
+          </div>
+          <div>
+            Age: 
+            20
+          </div>
+        </div>
+        <a
+          class="btn btn-primary"
+          href="/purchased=dev_ins"
+        >
+          Purchase
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BuyFlow Component displays the correct product name 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <h4
+      class="mb-6 text-2xl"
+    >
+      Buying 
+      Developer Insurance
+    </h4>
+    <div
+      class="flex justify-center w-60"
+    >
+      <div
+        class="flex flex-col gap-4 w-full"
+      >
+        <div
+          class="flex flex-col gap-2 items-start"
+        >
+          <label>
+            Email
+            :
+          </label>
+          <input
+            class="input input-bordered input-primary w-full max-w-xs"
+            data-testid="email"
+            type="email"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BuyFlow Component renders email step initially 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <h4
+      class="mb-6 text-2xl"
+    >
+      Buying 
+      Developer Insurance
+    </h4>
+    <div
+      class="flex justify-center w-60"
+    >
+      <div
+        class="flex flex-col gap-4 w-full"
+      >
+        <div
+          class="flex flex-col gap-2 items-start"
+        >
+          <label>
+            Email
+            :
+          </label>
+          <input
+            class="input input-bordered input-primary w-full max-w-xs"
+            data-testid="email"
+            type="email"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
