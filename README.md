@@ -67,7 +67,7 @@ The project follows the atomic design methodology. Components are categorized in
 │   │   │       └── tests/
 │   │   │           └── index.test.tsx
 │   │   ├── organisms/
-│   │   │  └── BuyFlow/
+│   │   │  └── InsuranceBuyFlow/
 │   │   │       ├── index.tsx
 │   │   │       └── tests/
 │   │   │           └── index.test.tsx

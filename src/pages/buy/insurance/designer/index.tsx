@@ -1,9 +1,9 @@
 import React from "react";
-import BuyFlow from "@/components/organisms/BuyFlow";
+import InsuranceBuyFlow from "@/components/organisms/InsuranceBuyFlow";
 import { PRODUCT_PROPS, ProductIds } from "@/components/types";
 
 export default function DesignerInsurance() {
   const designerProductProps = PRODUCT_PROPS[ProductIds.designerIns];
 
-  return <BuyFlow {...designerProductProps} />;
+  return <InsuranceBuyFlow {...designerProductProps} />;
 }

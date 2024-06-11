@@ -4,13 +4,13 @@ import AgeStep from "@/components/molecules/AgeStep";
 import EmailStep from "@/components/molecules/EmailStep";
 import SummaryStep from "@/components/molecules/SummaryStep";
 import {
-  BuyFlowProps,
+  InsuranceBuyFlowProps,
   CollectedData,
   Name,
   StepsType,
 } from "@/components/types";
 
-const BuyFlow: React.FC<BuyFlowProps> = (props) => {
+const InsuranceBuyFlow: React.FC<InsuranceBuyFlowProps> = (props) => {
   const { dataSteps, productName } = props;
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [collectedData, updateCollectedData] = useState<CollectedData>(
@@ -46,4 +46,4 @@ const BuyFlow: React.FC<BuyFlowProps> = (props) => {
   );
 };
 
-export default BuyFlow;
+export default InsuranceBuyFlow;

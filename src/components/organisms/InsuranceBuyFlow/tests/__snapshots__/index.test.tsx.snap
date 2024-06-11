@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BuyFlow Component completes the buyflow process properly for designer insurance 1`] = `
+exports[`InsuranceBuyFlow Component completes the insurance buy flow process properly for designer insurance 1`] = `
 <div>
   <div
     class="flex flex-col items-center"
@@ -49,7 +49,7 @@ exports[`BuyFlow Component completes the buyflow process properly for designer i
 </div>
 `;
 
-exports[`BuyFlow Component completes the buyflow process properly for developer insurance 1`] = `
+exports[`InsuranceBuyFlow Component completes the insurance buy flow process properly for developer insurance 1`] = `
 <div>
   <div
     class="flex flex-col items-center"
@@ -90,7 +90,7 @@ exports[`BuyFlow Component completes the buyflow process properly for developer 
 </div>
 `;
 
-exports[`BuyFlow Component display the correct product name for designer insurance 1`] = `
+exports[`InsuranceBuyFlow Component display the correct product name for designer insurance 1`] = `
 <div>
   <div
     class="flex flex-col items-center"
@@ -132,7 +132,7 @@ exports[`BuyFlow Component display the correct product name for designer insuran
 </div>
 `;
 
-exports[`BuyFlow Component display the correct product name for developer insurance 1`] = `
+exports[`InsuranceBuyFlow Component display the correct product name for developer insurance 1`] = `
 <div>
   <div
     class="flex flex-col items-center"

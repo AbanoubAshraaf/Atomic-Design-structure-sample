@@ -6,15 +6,15 @@ import {
   mockValidDeveloperUserData,
 } from "@/components/test/mocks";
 import { createSnapShot } from "@/components/test/utils";
-import BuyFlow from "..";
+import InsuranceBuyFlow from "..";
 
-describe("BuyFlow Component", () => {
+describe("InsuranceBuyFlow Component", () => {
   const developerProductProps = PRODUCT_PROPS[ProductIds.developerIns];
   const designerProductProps = PRODUCT_PROPS[ProductIds.designerIns];
 
   test("display the correct product name for developer insurance", () => {
     const { container, getByText } = render(
-      <BuyFlow {...developerProductProps} />,
+      <InsuranceBuyFlow {...developerProductProps} />,
     );
     expect(getByText("Buying Developer Insurance")).toBeInTheDocument();
 
@@ -23,7 +23,7 @@ describe("BuyFlow Component", () => {
 
   test("display the correct product name for designer insurance", () => {
     const { container, getByText } = render(
-      <BuyFlow {...designerProductProps} />,
+      <InsuranceBuyFlow {...designerProductProps} />,
     );
     expect(getByText("Buying Designer Insurance")).toBeInTheDocument();
 
@@ -31,13 +31,15 @@ describe("BuyFlow Component", () => {
   });
 
   test("render email step initially", () => {
-    const { getByTestId } = render(<BuyFlow {...developerProductProps} />);
+    const { getByTestId } = render(
+      <InsuranceBuyFlow {...developerProductProps} />,
+    );
     expect(getByTestId("email")).toBeInTheDocument();
   });
 
-  test("completes the buyflow process properly for developer insurance", () => {
+  test("completes the insurance buy flow process properly for developer insurance", () => {
     const { container, getByTestId, getByText } = render(
-      <BuyFlow {...developerProductProps} />,
+      <InsuranceBuyFlow {...developerProductProps} />,
     );
 
     // Initial email step
@@ -60,9 +62,9 @@ describe("BuyFlow Component", () => {
     createSnapShot(container);
   });
 
-  test("completes the buyflow process properly for designer insurance", () => {
+  test("completes the insurance buy flow process properly for designer insurance", () => {
     const { container, getByTestId, getByText } = render(
-      <BuyFlow {...designerProductProps} />,
+      <InsuranceBuyFlow {...designerProductProps} />,
     );
 
     // Initial email step

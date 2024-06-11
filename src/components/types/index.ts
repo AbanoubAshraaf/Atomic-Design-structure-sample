@@ -1,4 +1,4 @@
-export interface BuyFlowProps {
+export interface InsuranceBuyFlowProps {
   dataSteps: Step[];
   productName: string;
 }
@@ -10,7 +10,7 @@ export enum ProductIds {
 
 export type Step = "email" | "age" | "summary" | "name";
 
-export const PRODUCT_PROPS: Record<ProductIds, BuyFlowProps> = {
+export const PRODUCT_PROPS: Record<ProductIds, InsuranceBuyFlowProps> = {
   [ProductIds.developerIns]: {
     dataSteps: ["email", "age", "summary"],
     productName: "Developer Insurance",

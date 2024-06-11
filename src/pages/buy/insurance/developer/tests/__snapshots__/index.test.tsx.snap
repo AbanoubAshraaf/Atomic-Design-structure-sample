@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DeveloperInsurance/> Integration tests renders BuyFlow with correct product ID 1`] = `
+exports[`<DeveloperInsurance/> Integration tests renders InsuranceBuyFlow with correct product ID 1`] = `
 <div>
   <div
     class="flex flex-col items-center"
