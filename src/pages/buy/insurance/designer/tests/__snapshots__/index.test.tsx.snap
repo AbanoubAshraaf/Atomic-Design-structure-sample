@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DesignerInsurance/> Integration tests renders InsuranceBuyFlow with correct product ID 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center"
+  >
+    <h4
+      class="mb-6 text-2xl"
+    >
+      Buying 
+      Designer Insurance
+    </h4>
+    <div
+      class="flex justify-center w-60"
+    >
+      <div
+        class="flex flex-col gap-4 w-full"
+      >
+        <div
+          class="flex flex-col gap-2 items-start"
+        >
+          <label>
+            Email
+            :
+          </label>
+          <input
+            class="input input-bordered input-primary w-full max-w-xs"
+            data-testid="email"
+            type="email"
+            value=""
+          />
+        </div>
+        <button
+          class="btn btn-primary"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

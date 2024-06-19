@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputField /> display error message 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-2 items-start"
+  >
+    <label>
+      Test Label
+      :
+    </label>
+    <input
+      class="input input-bordered input-primary w-full max-w-xs"
+      data-testid="test label"
+      type="text"
+      value=""
+    />
+    <span
+      class="error-text"
+    >
+      Test Error
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<InputField /> render input field with label 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-2 items-start"
+  >
+    <label>
+      Test Label
+      :
+    </label>
+    <input
+      class="input input-bordered input-primary w-full max-w-xs"
+      data-testid="test label"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
