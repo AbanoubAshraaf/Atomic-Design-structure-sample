@@ -1,4 +1,4 @@
-# Getsafe Frontend Coding Challenge
+# Frontend Coding Challenge
 
 ## Setup
 This is your personal **private** repository for the coding challenge. Please **create a new branch** for your changes, do not push to `main` directly.
