@@ -1,6 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SummaryStep/> Component tests should match snapshot 1`] = `
+exports[`<SummaryStep/> Component tests displays collected data and Purchase button correctly for designer insurance 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2 items-start"
+    >
+      <div>
+        Email: 
+        test@getsafe.com
+      </div>
+      <div>
+        Age: 
+        20
+      </div>
+      <div>
+        First Name: 
+        John
+      </div>
+      <div>
+        Last Name: 
+        Doe
+      </div>
+    </div>
+    <a
+      class="btn btn-primary"
+      href="/purchased=dev_ins"
+    >
+      Purchase
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<SummaryStep/> Component tests displays collected data and Purchase button correctly for developer insurance 1`] = `
 <div>
   <div
     class="flex flex-col gap-4 w-full"

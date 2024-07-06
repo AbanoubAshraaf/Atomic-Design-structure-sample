@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import EmailStep from "@/components/molecules/EmailStep";
-import { mockValidUserData } from "@/components/test/mocks";
+import { mockValidDeveloperUserData } from "@/components/test/mocks";
 import { createSnapShot } from "@/components/test/utils";
 
 describe("<EmailStep/> Component tests", () => {
@@ -30,14 +30,16 @@ describe("<EmailStep/> Component tests", () => {
 
   test("call callback with email value on button click", () => {
     const mockCallback = jest.fn();
-    const { getByTestId, getByText } = render(
+    const { container, getByTestId, getByText } = render(
       <EmailStep onClick={mockCallback} />,
     );
 
     fireEvent.change(getByTestId("email"), {
-      target: { value: mockValidUserData.email },
+      target: { value: mockValidDeveloperUserData.email },
     });
     fireEvent.click(getByText("Next"));
     expect(mockCallback).toHaveBeenCalledWith("email", "test@getsafe.com");
+
+    createSnapShot(container);
   });
 });

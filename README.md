@@ -1,3 +1,163 @@
+# Insurance BuyFlow
+
+This project implements an insurance buying flow for developers and designers. The designer flow includes an additional step for collecting the customer's first and last name. The project follows an atomic design methodology for better component organization and reuse.
+
+## Table of Contents
+
+- [Designer Insurance BuyFlow](#designer-insurance-buyflow)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Development](#development)
+  - [Project Structure](#project-structure)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+  - [Testing](#testing)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [The achieved task](#setup)
+
+## Features
+
+- Insurance buying flow for developers and designers.
+- Additional step in the designer flow to collect first and last names.
+- Validation for required fields to ensure data integrity.
+- Organized using atomic design principles.
+
+## Development
+
+### Atomic Design
+
+The project follows the atomic design methodology. Components are categorized into:
+
+- **Atoms:** Basic building blocks like buttons, inputs, etc.
+- **Molecules:** Combinations of atoms like forms, input groups, etc.
+- **Organisms:** Groups of molecules forming distinct sections of the application.
+- **Pages:** High-level components representing different pages/screens.
+
+## Project Structure
+
+```
+.
+├── src/
+│   ├── components/
+│   │   ├── atoms/
+│   │   │   ├── Button/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── tests/
+│   │   │   │       └── index.test.tsx
+│   │   │   └── InputField/
+│   │   │       ├── index.tsx
+│   │   │       └── tests/
+│   │   │           └── index.test.tsx
+│   │   ├── molecules/
+│   │   │   ├── AgeStep/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── tests/
+│   │   │   │       └── index.test.tsx
+│   │   │   ├── EmailStep/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── tests/
+│   │   │   │       └── index.test.tsx
+│   │   │   ├── NameStep/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── tests/
+│   │   │   │       └── index.test.tsx
+│   │   │   └── SummaryStep/
+│   │   │       ├── index.tsx
+│   │   │       └── tests/
+│   │   │           └── index.test.tsx
+│   │   ├── organisms/
+│   │   │  └── BuyFlow/
+│   │   │       ├── index.tsx
+│   │   │       └── tests/
+│   │   │           └── index.test.tsx
+│   │   ├── test/
+│   │   │  └── mocks/
+│   │   │  │    ├── index.ts
+│   │   │  └── utils.ts
+│   │   │  
+│   │   ├── types/
+│   │   │    └── index.ts
+│   │   │  
+│   │   └── utils/
+│   │       └── tests/
+│   │       │    ├── index.ts
+│   │       └── index.ts
+│   │      
+│   │── pages/
+│   │   ├── buy/
+│   │   │   ├── insurance/
+│   │   │   │   ├── Developer/
+│   │   │   │   │   ├── index.tsx
+│   │   │   │   │   └── tests/
+│   │   │   │   │       └── index.test.tsx
+│   │   │   │   └── Designer/
+│   │   │   │       ├── index.tsx
+│   │   │   │       └── tests/
+│   │   │   │           └── index.test.tsx
+│   │   │── _app.tsx
+│   │   │── _document.tsx_
+│   └   └── index.tsx
+└── configuration files
+```
+
+## Installation
+
+1. **Install dependencies:**
+   ```sh
+   yarn
+   ```
+
+## Running the Application
+
+To start the development server:
+
+```sh
+yarn dev
+```
+
+The application will be available at `http://localhost:3000`.
+
+## Testing
+
+To run the tests:
+
+```sh
+yarn test
+```
+
+This will run all unit and integration tests using Jest and React Testing Library.
+
+### Code Formatting and Linting
+
+Ensure code quality and consistency with Prettier and ESLint:
+
+- **Format code:**
+  ```sh
+  yarn format
+  ```
+
+- **Lint code:**
+  ```sh
+  yarn lint
+  ```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes with clear and descriptive commit messages.
+4. Push your changes to your fork.
+5. Create a pull request to the main repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
 # Frontend Coding Challenge
 
 ## Setup
