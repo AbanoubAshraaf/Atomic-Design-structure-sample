@@ -158,7 +158,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-# Getsafe Frontend Coding Challenge
+# Frontend Coding Challenge
 
 ## Setup
 This is your personal **private** repository for the coding challenge. Please **create a new branch** for your changes, do not push to `main` directly.
